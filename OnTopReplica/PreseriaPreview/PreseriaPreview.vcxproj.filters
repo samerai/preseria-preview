@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\MessagePumpProcessors">
+      <UniqueIdentifier>{9fc03c5d-94e4-428d-8bf0-8ddb2afdeddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Platforms">
+      <UniqueIdentifier>{e637b822-b531-46e9-9345-0931f60bcfef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Native">
+      <UniqueIdentifier>{ff3e0a14-cdbe-412b-a43a-77e421267d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NDesk">
+      <UniqueIdentifier>{cc7f7cd4-f78c-4793-bf28-30c3e5eef171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NDesk\Options">
+      <UniqueIdentifier>{cf7c4c83-dc35-4dce-b431-21842696305f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StartupOptions">
+      <UniqueIdentifier>{cf186b63-b894-44a4-a323-aa543e6bb995}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ontopreplica\messagepumpprocessors\basemessagepumpprocessor.cs">
+      <Filter>Source Files\MessagePumpProcessors</Filter>
+    </None>
+    <None Include="..\ontopreplica\messagepumpprocessors\groupswitchmanager.cs">
+      <Filter>Source Files\MessagePumpProcessors</Filter>
+    </None>
+    <None Include="..\ontopreplica\messagepumpprocessors\hotkeymanager.cs">
+      <Filter>Source Files\MessagePumpProcessors</Filter>
+    </None>
+    <None Include="..\ontopreplica\messagepumpprocessors\shellinterceptprocessor.cs">
+      <Filter>Source Files\MessagePumpProcessors</Filter>
+    </None>
+    <None Include="..\ontopreplica\messagepumpprocessors\windowkeeper.cs">
+      <Filter>Source Files\MessagePumpProcessors</Filter>
+    </None>
+    <None Include="..\ontopreplica\platforms\debugplatform.cs">
+      <Filter>Source Files\Platforms</Filter>
+    </None>
+    <None Include="..\ontopreplica\platforms\other.cs">
+      <Filter>Source Files\Platforms</Filter>
+    </None>
+    <None Include="..\ontopreplica\platforms\windowsseven.cs">
+      <Filter>Source Files\Platforms</Filter>
+    </None>
+    <None Include="..\ontopreplica\platforms\windowsvista.cs">
+      <Filter>Source Files\Platforms</Filter>
+    </None>
+    <None Include="..\ontopreplica\platforms\windowsxp.cs">
+      <Filter>Source Files\Platforms</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\commoncontrols.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\errormethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\filesystemmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\hookmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\hotkeymethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\ht.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\inputmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\itaskbarlist.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\messagingmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\mk.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\point.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\rectangle.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\virtualkeystate.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\windowmanagermethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\windowmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\windowssevenmethods.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\wm.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\native\wmsz.cs">
+      <Filter>Source Files\Native</Filter>
+    </None>
+    <None Include="..\ontopreplica\ndesk\options\options.cs">
+      <Filter>Source Files\NDesk\Options</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\clistatus.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\commandlinereportform.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\factory.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\options.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\rectangleconverter.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\screenpositionconverter.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+    <None Include="..\ontopreplica\startupoptions\sizeconverter.cs">
+      <Filter>Source Files\StartupOptions</Filter>
+    </None>
+  </ItemGroup>
+</Project>
