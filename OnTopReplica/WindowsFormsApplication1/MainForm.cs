@@ -43,7 +43,8 @@ namespace OnTopReplica {
             };
             _thumbnailPanel.CloneClick += new EventHandler<CloneClickEventArgs>(Thumbnail_CloneClick);
             Controls.Add(_thumbnailPanel);
-
+            ShowInTaskbar = false;
+            TopMost = false;
             //Set native renderer on context menus
             //Asztal.Szótár.NativeToolStripRenderer.SetToolStripRenderer(
             //    menuContext, menuWindows, menuOpacity, menuResize, menuFullscreenContext
@@ -128,10 +129,10 @@ namespace OnTopReplica {
 
             //HACK: sometimes, even if TopMost is true, the window loses its "always on top" status.
             //  This is a fix attempt that probably won't work...
-            if (!IsFullscreen) { //fullscreen mode doesn't use TopMost
+            /*if (!IsFullscreen) { //fullscreen mode doesn't use TopMost
                 TopMost = false;
                 TopMost = true;
-            }
+            }*/
         }
 
         protected override void OnMouseWheel(MouseEventArgs e) {
@@ -315,7 +316,8 @@ namespace OnTopReplica {
 
                 //Common
                 GlassEnabled = !value;
-                TopMost = !value;
+                //TopMost = !value;
+                TopMost = false; //preseria keeps window topmost when needed
                 HandleMouseMove = !value;
 
                 _isFullscreen = value;

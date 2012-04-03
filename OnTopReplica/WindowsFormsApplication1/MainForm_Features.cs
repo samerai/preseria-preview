@@ -52,7 +52,7 @@ namespace OnTopReplica {
                 //Enable transparency and force as top-most
                 TransparencyKey = (value) ? Color.Black : DefaultNonClickTransparencyKey;
                 if (value)
-                    TopMost = true;
+                    TopMost = false;//  true; preseria keeps topmost when active
 
                 _clickThrough = value;
             }

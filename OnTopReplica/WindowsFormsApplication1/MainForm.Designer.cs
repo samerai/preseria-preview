@@ -503,7 +503,7 @@
             this.MinimumSize = new System.Drawing.Size(40, 40);
             this.Name = "MainForm";
             this.Text = "Preseria-Preview";
-            this.TopMost = true;
+            this.TopMost = false;//was true before but now topmost
             /*this.menuContext.ResumeLayout(false);
             this.menuWindows.ResumeLayout(false);
             this.menuOpacity.ResumeLayout(false);
