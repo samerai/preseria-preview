@@ -60,6 +60,10 @@ namespace OnTopReplica.StartupOptions {
                 .Add<long>("windowId=", "Window handle ({HWND}) to be cloned.", id => {
                     options.WindowId = new IntPtr(id);
                 })
+                .Add<String>("windowHandle=", "Window handle ({HWND}) to be cloned. Value in hex", id =>
+                {
+                    options.WindowId = new IntPtr(Convert.ToInt64(id, 16));
+                })
                 .Add<string>("windowTitle=", "{TITLE} of the window to be cloned.", s => {
                     options.WindowTitle = s;
                 })

@@ -72,8 +72,10 @@ namespace OnTopReplica {
         /// Forces the form to update its height based on the current aspect ratio setting.
         /// </summary>
         public void RefreshAspectRatio() {
-            int newWidth = ClientSize.Width;
+            
+
             int newHeight = (int)((ClientSize.Width - ExtraPadding.Horizontal) / AspectRatio) + ExtraPadding.Vertical;
+            int newWidth = (int)((newHeight - ExtraPadding.Vertical) / AspectRatio) + ExtraPadding.Horizontal; //ClientSize.Width;
             if (newHeight < FromSizeToClientSize(MinimumSize).Height) {
                 newHeight = FromSizeToClientSize(MinimumSize).Height;
                 newWidth = (int)((newHeight - ExtraPadding.Vertical) * AspectRatio) + ExtraPadding.Horizontal;

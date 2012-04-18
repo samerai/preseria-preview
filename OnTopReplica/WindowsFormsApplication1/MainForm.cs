@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using OnTopReplica.Native;
 using PreseriaPreview.Properties;
 using OnTopReplica.StartupOptions;
-//using OnTopReplica.Update;
+
 using OnTopReplica.WindowSeekers;
 using WindowsFormsAero.Dwm;
 using WindowsFormsAero.TaskDialog;
@@ -41,15 +41,13 @@ namespace OnTopReplica {
                 Location = Point.Empty,
                 Dock = DockStyle.Fill
             };
+
+
             _thumbnailPanel.CloneClick += new EventHandler<CloneClickEventArgs>(Thumbnail_CloneClick);
             Controls.Add(_thumbnailPanel);
             ShowInTaskbar = false;
             TopMost = false;
-            //Set native renderer on context menus
-            //Asztal.Szótár.NativeToolStripRenderer.SetToolStripRenderer(
-            //    menuContext, menuWindows, menuOpacity, menuResize, menuFullscreenContext
-            //);
-
+            
             //Set to Key event preview
             this.KeyPreview = true;
         }
@@ -98,15 +96,11 @@ namespace OnTopReplica {
         }
 
         protected override void OnMove(EventArgs e) {
-            //base.OnMove(e);
-
-            //AdjustSidePanelLocation();
+            //dont call base
         }
 
         protected override void OnResizeEnd(EventArgs e) {
-            //base.OnResizeEnd(e);
-
-            //RefreshScreenLock();
+            //dont call base
         }
 
         protected override void OnActivated(EventArgs e) {
@@ -136,22 +130,11 @@ namespace OnTopReplica {
         }
 
         protected override void OnMouseWheel(MouseEventArgs e) {
-           /* base.OnMouseWheel(e);
-
-            if (!IsFullscreen) {
-                int change = (int)(e.Delta / 6.0); //assumes a mouse wheel "tick" is in the 80-120 range
-                AdjustSize(change);
-                RefreshScreenLock();
-            }*/
+           //dont call base
         }
 
         protected override void OnMouseDoubleClick(MouseEventArgs e) {
-            //base.OnMouseDoubleClick(e);
-
-            //This is handled by the WM_NCLBUTTONDBLCLK msg handler usually (because the GlassForm translates
-            //clicks on client to clicks on caption). But if fullscreen mode disables GlassForm dragging, we need
-            //this auxiliary handler to switch mode.
-            //IsFullscreen = !IsFullscreen;
+            //dont call base
         }
 
         protected override void OnMouseClick(MouseEventArgs e) {
@@ -171,22 +154,9 @@ namespace OnTopReplica {
             }
 
             switch (m.Msg) {
-                /*case WM.NCRBUTTONUP:
-                    //Open context menu if right button clicked on caption (i.e. all of the window area because of glass)
-                    if (m.WParam.ToInt32() == HT.CAPTION) {
-                        OpenContextMenu();
-
-                        m.Result = IntPtr.Zero;
-                        return;
-                    }
-                    break;*/
                 case WM.NCLBUTTONDBLCLK:
                     //Toggle fullscreen mode if double click on caption (whole glass area)
                     if (m.WParam.ToInt32() == HT.CAPTION) {
-                        /*int xPos = m.LParam.ToInt32() & 0xFF00 >> 2;
-                        int yPos = m.LParam.ToInt32() & 0x00FF;
-                        CloneClickEventArgs e = new CloneClickEventArgs(new Point(xPos, yPos), MouseButtons.Left);
-                        Thumbnail_CloneClick(this, e);*/
                         return;
                     }
                     break;
@@ -201,11 +171,6 @@ namespace OnTopReplica {
                     case WM.NCLBUTTONDOWN:
                         if (m.WParam.ToInt32() == HT.CAPTION)
                     {
-                        /*m.Result = (IntPtr)HT.TRANSPARENT;
-                        int xPos = m.LParam.ToInt32() & 0x0000FFFF;
-                        int yPos = (int)((m.LParam.ToInt32() & 0xFFFF0000) >> 16);
-                        CloneClickEventArgs e = new CloneClickEventArgs(_thumbnailPanel.ClientToThumbnail(new Point(xPos, yPos)), MouseButtons.Left);
-                        Thumbnail_CloneClick(CurrentThumbnailWindowHandle, e);*/
                         return;
                     }
                     break;//*/
@@ -223,59 +188,6 @@ namespace OnTopReplica {
 
         #endregion
 
-        #region Keyboard event handling
-        /*
-        protected override void OnKeyUp(KeyEventArgs e) {
-            base.OnKeyUp(e);
-
-            //ALT
-            if (e.Modifiers == Keys.Alt) {
-                if (e.KeyCode == Keys.Enter) {
-                    e.Handled = true;
-                    IsFullscreen = !IsFullscreen;
-                }
-
-                else if (e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1) {
-                    FitToThumbnail(0.25);
-                }
-
-                else if (e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2) {
-                    FitToThumbnail(0.5);
-                }
-
-                else if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3 ||
-                         e.KeyCode == Keys.D0 || e.KeyCode == Keys.NumPad0) {
-                    FitToThumbnail(1.0);
-                }
-
-                else if (e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4) {
-                    FitToThumbnail(2.0);
-                }
-            }
-
-            //ESCAPE
-            else if (e.KeyCode == Keys.Escape) {
-
-#if DEBUG
-                Console.WriteLine("Received ESCAPE");
-#endif
-
-                //Disable click-through
-                if (ClickThroughEnabled) {
-                    ClickThroughEnabled = false;
-                }
-                //Toggle fullscreen
-                else if (IsFullscreen) {
-                    IsFullscreen = false;
-                }
-                //Disable click forwarding
-                else if (ClickForwardingEnabled) {
-                    ClickForwardingEnabled = false;
-                }
-            }
-        }
-        */
-        #endregion
 
         #region Fullscreen
 

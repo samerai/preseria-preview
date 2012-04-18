@@ -60,18 +60,6 @@ namespace OnTopReplica
             //Show form
             using (_mainForm = new MainForm(options))
             {
-                //Start up update manager
-                //Update = new UpdateManager(_mainForm);
-                //Update.UpdateCheckCompleted += new EventHandler<UpdateCheckCompletedEventArgs>(UpdateManager_CheckCompleted);
-                bool doneCheck = false;
-                _mainForm.Shown += delegate
-                {
-                    if (doneCheck) return;
-                    doneCheck = true;
-
-                    //Delay first update check to when form is visible
-                    //Update.CheckForUpdate();
-                };
 
                 //Enter GUI loop
                 Application.Run(_mainForm);
